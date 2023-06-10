@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,36 +8,109 @@
     <link rel="stylesheet" href="./style.css">
     <title>Chat.io</title>
 </head>
-<div class="app">
-    <div class="screen join-screen active">
-        <div class="form">
-            <h2>Join Chat</h2>
-            <div class="form-input">
-                <label>Username</label>
-                <input type="text" id="username" placeholder="Enter your username" required>
+
+<body>
+
+    <div id="wallpaper"></div>
+
+    <div class="app">
+
+        <div id="big-container" class="join-screen">
+            <div class="top">
+                <h1>Log in</h1>
             </div>
-            <div class="form-input">
-                <button id="join-user">Join</button>
+            <div class="corps">
+                <div class="corps-text">
+                    We are Different, We Make You Different.
+                </div>
+                <form action="" id="form-login">
+                    <input type="text" placeholder="Enter username" id="pseudo" required>
+                    <input type="text" placeholder="Room" id="room" required>
+                    <button type="submit" id="login">JOIN</button>
+                </form>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="active chat-screen">
+            <div class="header">
+                <div class="logo">
+                    <img src="./img/boite-de-discussion.png" alt="">
+                    <div class="text-logo">Chat.io</div>
+                </div>
+                <div id="all-btn">
+                    <button id="darkLight">
+                        <img src="./img/8541704_cloud_moon_icon.png" alt="" id="dark-light">
+                    </button>
+                    <button id="exit-chat">
+                        <img src="./img/9104136_logout_sign out_exit_dooe_out_icon.png" alt="">
+                    </button>
+                </div>
+            </div>
+
+            <div class="messages">
+
+                <div class="block1">
+                    <div id="title-online">Online now : </div>
+                    <div class="userComing">Jhon doe</div>
+                    <div class="userComing">Jane doe</div>
+                </div>
+
+
+                <div class="block2">
+
+                    <div class="content-message myImage smsComing">
+                        <div class="name-img">
+                            <div class="name">You</div>
+                            <a href="./img/45777264.jpg" title="watch it">
+                                <img src="./img/45777264.jpg" />
+                            </a>
+                            <div class="name">7/12/2023 - 07:65</div>
+                        </div>
+                    </div>
+
+                    <div class="content-message flex-end smsComing">
+                        <div class="forText">
+                            <div class="name">You</div>
+                            <div class="text">Lorem ipsum dolor sit, amet consectetur adipisicing.</div>
+                            <div class="name">7/12/2023 - 07:65</div>
+                        </div>
+                    </div>
+
+                    <div class="content-message flex-start smsComing">
+                        <div class="forText">
+                            <div class="name">You</div>
+                            <div class="text bgc-otherMp">Lorem ipsum dolor sit, amet consectetur adipisicing.</div>
+                            <div class="name">7/12/2023 - 07:65</div>
+                        </div>
+                    </div>
+
+                    <div class="update">jane is here</div>
+
+                </div>
+
+            </div>
+
+            <div id="user-input">
+                <div class="typebox">
+                    <label for="image-input">
+                        <img src="./img/ajouter-une-image.gif" alt="">
+                    </label>
+                    <input type="text" id="message-input" placeholder="Enter message" required>
+                    <button id="send-message" type="submit">
+                        <img src="./img/message.gif" alt="">
+                    </button>
+                </div>
+                <input type="file" id="image-input" accept="image/jpeg, image/png, image/jpg">
             </div>
         </div>
 
     </div>
-    <div class="screen chat-screen ">
-        <div class="header">
-            <div class="logo">CHAT.IO</div>
-            <button id="exit-chat">Exit</button>
-        </div>
-        <div class="messages">
-        </div>
-        <div class="typebox">
-                <input type="text" id="message-input" placeholder="Enter message">
-                <button id="send-message">Send</button>
-                
-        </div>
-    </div>
-</div>
-<body>
     <script type="text/javascript" src=" socket.io/socket.io.js"></script>
     <script type="text/javascript" src=" code.js"></script>
 </body>
+
 </html>
