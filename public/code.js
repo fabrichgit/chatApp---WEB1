@@ -190,11 +190,8 @@
             `;
 
         } else if (owner == "update") {
-            let el1 = document.createElement("div");
-            el1.innerText = content;
-
-            messageContainer.appendChild(el);
-            el1.setAttribute("class", "update");
+            messageContainer.innerHTML += `
+            <div class="update">${content}</div>`;
 
         } else if (type == "image" && owner == "my") {
             messageContainer.innerHTML += content;

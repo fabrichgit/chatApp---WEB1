@@ -281,6 +281,8 @@ form button {
     box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.678), inset 0px -4px -8px rgba(0, 0, 0, 0.678);
     overflow-x: hidden;
     overflow-y: auto;
+
+    animation: effect 3s infinite linear;
 }
 
 .content-message {
@@ -422,3 +424,6 @@ form button {
         opacity: 1;
     }
 }
+
+
+.bgc-ownMp
